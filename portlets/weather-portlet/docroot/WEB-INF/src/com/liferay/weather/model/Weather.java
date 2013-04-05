@@ -24,16 +24,16 @@ public class Weather implements Serializable {
 	public Weather() {
 	}
 
-	public Weather(String zip, float currentTemp) {
+	public Weather(String zip, int currentTemp) {
 		this(zip, null, currentTemp);
 	}
 
-	public Weather(String zip, String iconURL, float currentTemp) {
+	public Weather(String zip, String iconURL, int currentTemp) {
 		this(zip, iconURL, null, currentTemp, (float)0.0, (float)0.0, null);
 	}
 
 	public Weather(
-		String zip, String iconURL, String conditions, float currentTemp,
+		String zip, String iconURL, String conditions, int currentTemp,
 		float humidity, float barometer, String barometerDirection) {
 
 		_zip = zip;
@@ -57,7 +57,7 @@ public class Weather implements Serializable {
 		return _conditions;
 	}
 
-	public float getCurrentTemp() {
+	public int getCurrentTemp() {
 		return _currentTemp;
 	}
 
@@ -85,7 +85,7 @@ public class Weather implements Serializable {
 		_conditions = conditions;
 	}
 
-	public void setCurrentTemp(float currentTemp) {
+	public void setCurrentTemp(int currentTemp) {
 		_currentTemp = currentTemp;
 	}
 
@@ -104,7 +104,7 @@ public class Weather implements Serializable {
 	private float _barometer;
 	private String _barometerDirection;
 	private String _conditions;
-	private float _currentTemp;
+	private int _currentTemp;
 	private float _humidity;
 	private String _iconURL;
 	private String _zip;
